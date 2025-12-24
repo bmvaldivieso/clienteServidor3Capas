@@ -4,7 +4,7 @@
  */
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://100.123.199.104:5001/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -47,6 +47,11 @@ export const empleadosAPI = {
   create: (data) => api.post('/empleados', data),
   update: (id, data) => api.put(`/empleados/${id}`, data),
   delete: (id) => api.delete(`/empleados/${id}`),
+};
+
+export const pagosAPI = {
+  create: (data) => api.post('/pagos', data),
+  getByEmpleado: (empId) => api.get(`/pagos/empleado/${empId}`),
 };
 
 export default api;

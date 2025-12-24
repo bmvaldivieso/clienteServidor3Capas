@@ -16,14 +16,15 @@ function App() {
     switch (currentView) {
       case 'empresas':
         return <EmpresaView />;
+      case 'empleados':
+        return <EmpleadoView />;
       case 'servicios':
         return <ServicioView />;
       case 'contratos':
         return <ContratoView />;
+        
       default:
         return <EmpresaView />;
-      case 'empleados':
-        return <EmpleadoView />;
     }
   };
 
