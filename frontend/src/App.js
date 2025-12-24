@@ -21,10 +21,11 @@ function App() {
       case 'servicios':
         return <ServicioView />;
       case 'contratos':
-        return <ContratoView />;
-        
+        return <ContratoView />;        
+
       default:
         return <EmpresaView />;
+      
     }
   };
 
